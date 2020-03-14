@@ -8,22 +8,33 @@ function MemoBoard(props){
         window.scrollTo(0,document.body.scrollHeight);
     })
 
-    const memos = props.data;
+    //const memos = props.data;
+    const memos = props.list.memos;
+    
     return (
         <>
         <div className="container">
             {
                 memos.map((item, index) => {
+                    
+                    const id = item.get('id');
+                    const title = item.get('title');
+                    const date = item.get('date');
+                    const angle = item.get('angle');
+                    const color = item.get('color');
+                    const font = item.get('font');
+                    const textContent = item.get('text');
+
                     return (
                         <Memo key={index}
-                            id={item.id}
-                            title={item.title} 
-                            date={item.date}
-                            angle={item.angle}
-                            color={item.color}
-                            font={item.font}  
+                            id={id}
+                            title={title} 
+                            date={date}
+                            angle={angle}
+                            color={color}
+                            font={font}  
                         >
-                        { item.text }
+                        { textContent }
                         </Memo>
                     )
                 })

@@ -32,6 +32,9 @@ const styles = theme => ({
       margin: theme.spacing(1),
       minWidth: 120,
     },
+    textTitle: {
+        width: 250,
+    },
     selectEmpty: {
       marginTop: theme.spacing(2),
     },
@@ -140,16 +143,18 @@ class AddMemo extends React.Component {
         return (
             <>
             <div className="control-panel">
+            
             <Fab onClick={this.handleClickOpen.bind(this)} color="secondary" aria-label="add">
                 <AddIcon />
             </Fab>
 
             <Dialog 
-            fullWidth={true}
-            maxWidth={'md'}
-            open={this.state.open} 
-            onClose={this.handleClose.bind(this)} 
-            aria-labelledby="form-dialog-title">
+                fullWidth={true}
+                maxWidth={'md'}
+                open={this.state.open} 
+                onClose={this.handleClose.bind(this)} 
+                aria-labelledby="form-dialog-title"
+            >
 
                 <DialogTitle id="form-dialog-title">New Memo</DialogTitle>
                 
@@ -160,22 +165,23 @@ class AddMemo extends React.Component {
                 <MuiPickersUtilsProvider utils={DateFnsUtils}>
                     <Grid>
                     <KeyboardDatePicker
-                    disableToolbar
-                    variant="inline"
-                    format="MM/dd/yyyy"
-                    margin="normal"
-                    id="date-picker-inline"
-                    label="Date"
-                    KeyboardButtonProps={{
-                        'aria-label': 'select date',
-                    }}
-                    value={this.state.date}
-                    onChange={this.handleDateChange.bind(this)}
+                        disableToolbar
+                        variant="inline"
+                        format="MM/dd/yyyy"
+                        margin="normal"
+                        id="date-picker-inline"
+                        label="Date"
+                        KeyboardButtonProps={{
+                            'aria-label': 'select date',
+                        }}
+                        value={this.state.date}
+                        onChange={this.handleDateChange.bind(this)}
                     />
                     </Grid>                    
                 </MuiPickersUtilsProvider>
 
                 <TextField
+                    className={classes.textTitle}
                     margin="dense"
                     id="title"
                     label="Title"
@@ -199,50 +205,52 @@ class AddMemo extends React.Component {
                 />
 
                 <div className="select-container">
-                <InputLabel id="demo-simple-select-label">Color</InputLabel>
-                <Select
-                labelId="demo-simple-select-label"
-                id="demo-simple-select"
-                value={this.state.color}
-                onChange={this.handleChange.bind(this)}
-                className={classes.selectItem}
-                >
-                    <MenuItem value={'cornsilk'}>Default</MenuItem>
-                    <MenuItem value={'aquamarine'}>Aquamarine</MenuItem>
-                    <MenuItem value={'greenyellow'}>Green Yellow</MenuItem>
-                    <MenuItem value={'khaki'}>Khaki</MenuItem>
-                    <MenuItem value={'lightpink'}>Light Pink</MenuItem>
-                    <MenuItem value={'lightsalmon'}>Light Salmon</MenuItem>
-                    <MenuItem value={'palegreen'}> Pale Green</MenuItem>
-                    <MenuItem value={'powderblue'}>Powder Blue</MenuItem>
-                </Select>
+                    <InputLabel id="demo-simple-select-label">Color</InputLabel>
+                    <Select
+                        labelId="demo-simple-select-label"
+                        id="demo-simple-select"
+                        value={this.state.color}
+                        onChange={this.handleChange.bind(this)}
+                        className={classes.selectItem}
+                    >
+                        <MenuItem value={'cornsilk'}>Default</MenuItem>
+                        <MenuItem value={'aquamarine'}>Aquamarine</MenuItem>
+                        <MenuItem value={'greenyellow'}>Green Yellow</MenuItem>
+                        <MenuItem value={'khaki'}>Khaki</MenuItem>
+                        <MenuItem value={'lightpink'}>Light Pink</MenuItem>
+                        <MenuItem value={'lightsalmon'}>Light Salmon</MenuItem>
+                        <MenuItem value={'palegreen'}> Pale Green</MenuItem>
+                        <MenuItem value={'powderblue'}>Powder Blue</MenuItem>
+                    </Select>
                 </div>
                 
                 <div className="select-container">
-                <InputLabel id="font-simple-select-label">Font</InputLabel>
-                <Select
-                labelId="font-simple-select-label"
-                id="font-simple-select"
-                value={this.state.font}
-                onChange={this.handleFontChange.bind(this)}
-                className={classes.selectItemLong}
-                >
-                    <MenuItem value={0}>Default</MenuItem>
-                    <MenuItem value={1}>Comic Sans</MenuItem>
-                    <MenuItem value={2}>Courier</MenuItem>
-                    <MenuItem value={3}>Times New Roman</MenuItem>
-                </Select>
+                    <InputLabel id="font-simple-select-label">Font</InputLabel>
+                    <Select
+                        labelId="font-simple-select-label"
+                        id="font-simple-select"
+                        value={this.state.font}
+                        onChange={this.handleFontChange.bind(this)}
+                        className={classes.selectItemLong}
+                    >
+                        <MenuItem value={0}>Default</MenuItem>
+                        <MenuItem value={1}>Comic Sans</MenuItem>
+                        <MenuItem value={2}>Courier</MenuItem>
+                        <MenuItem value={3}>Times New Roman</MenuItem>
+                    </Select>
                 </div>
                 
                 </DialogContent>
+
                 <DialogActions>
-                <Button onClick={this.handleClose.bind(this)} color="primary">
-                    Cancel
-                </Button>
-                <Button onClick={this.handleAdd.bind(this)} color="primary">
-                    Add Memo
-                </Button>
+                    <Button onClick={this.handleClose.bind(this)} color="primary">
+                        Cancel
+                    </Button>
+                    <Button onClick={this.handleAdd.bind(this)} color="primary">
+                        Add Memo
+                    </Button>
                 </DialogActions>
+
             </Dialog>
 
         </div>
