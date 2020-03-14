@@ -1,0 +1,32 @@
+{
+  "items": [
+    { "id": "e3ehl2nk0gbj", 
+      "date": "2020-03-15", 
+      "title": "Movie Night", "text": "Watch Parasite 7:30PM", 
+      "color":"cornsilk", "font": "0", "angle": "-7" },
+    { "id": "a2xf51ms4ewd", 
+      "date": "2020-03-17", 
+      "title": "", "text": "Grocery @Tokuo Store. Buy white wine for pasta.", 
+      "color":"lightpink", "font": "1", "angle": "3" },
+    { "id": "h1qa7jwq0asm", 
+      "date": "2020-03-18", 
+      "title": "飲み会", "text": "Electric Sheep Bar Ni-chome 8PM", 
+      "color":"palegreen", "font": "2", "angle": "-4" },
+    { "id": "k3am6npl5sqx", 
+      "date": "2020-03-23", 
+      "title": "Karaoke", "text": "Manekineko すすきの店 4:00PM", 
+      "color":"aquamarine", "font": "0", "angle": "6" },
+    { "id": "d9wo2jnm1wpk", 
+      "date": "2020-03-25", 
+      "title": "Spring Sale", "text": "Hokkaido University 1-5PM", 
+      "color":"powderblue", "font": "3", "angle": "-5" },
+    { "id": "b2ax5yhn1owv", 
+      "date": "2020-03-26", 
+      "title": "Hiking", "text": "Mt. Moiwa 10AM", 
+      "color":"greenyellow", "font": "1", "angle": "3" },
+    { "id": "q8dj1kam3pwt", 
+      "date": "2020-03-27", 
+      "title": "Cheeki Breeki", "text": "Meet Anatoli 11AM", 
+      "color":"khaki", "font": "0", "angle": "-6" }
+  ]
+}
