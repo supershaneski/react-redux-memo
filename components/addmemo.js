@@ -99,6 +99,7 @@ class AddMemo extends React.Component {
                 error: true
             })
         } else {
+            
             this.props.addNewMemo({
                 title: this.state.title,
                 text: this.state.text,

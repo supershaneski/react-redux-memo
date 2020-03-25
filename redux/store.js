@@ -44,6 +44,7 @@ const addMemo = (state, action) => {
     
     const item = action.payload;
     const now = new Date(item.date);
+    
     const sdate = now.getDate();
     const smonth = 1 + parseInt(now.getMonth());
     const syear = now.getFullYear();
@@ -55,7 +56,7 @@ const addMemo = (state, action) => {
     const id = Lib.getSimpleId();
     const newlist = state.list.addMemo({
         id: id,
-        date: `${syear}-${smonth}-${sdate}`,
+        date: `${syear}/${smonth}/${sdate}`,
         title: item.title,
         text: item.text,
         color: item.color,
